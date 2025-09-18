@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="script.js" />
+  <style>
+    
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home">
+     <img src="./img/1000213015.jpg" alt="My Photo" class="profile-pic" />
+    <h1>Hello, I'm Vignesh</h1>
+    <p class="typing">Aspiring Web Developer | Designer | Creator</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+     <img src="./img/1000213015(1)(1).png" alt="About Me" class="about-pic" />
+    <p>
+      I am a passionate web developer and creative designer with expertise in building modern, responsive, and user-friendly websites. Along with strong technical skills, I bring a creative edge that allows me to design visually appealing interfaces and engaging digital experiences. I enjoy solving problems, learning new technologies, and combining creativity with functionality to deliver projects that leave a lasting impact
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Web Development</div>
+      <div class="skill">UI&UX Designer</div>
+      <div class="skill">Python </div>
+      <div class="skill">Adobe Photoshop</div>
+      <div class="skill">MS Office word &Excel</div>
+      <div class="skill">React</div>
+      <div class="skill">Video Editing</div>
+      <div class="skill">Figma</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="./img/Screenshot (100).png" alt="Project 1" />
+        <h3>Attendence Management system</h3>
+        <p>This application using for School & college It's very easy and  user friendly</p>
+      </div>
+      <div class="project">
+        <img src="./img/Screenshot (101).png" alt="Project 2" />
+        <h3>Restaurant App</h3>
+        <p>UI&UX Designing I know that figma tools and Adobe photoshop also</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+   <h3 id="thank"> 🙂Thank you For Watching My details </h3>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025Vignesh. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Scroll reveal effect
+    const sections = document.querySelectorAll("section");
+
+    const revealSection = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach((sec) => {
+        const boxTop = sec.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          sec.classList.add("show");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealSection);
+    revealSection(); // run on load
+  </script>
+</body>
+</html>
